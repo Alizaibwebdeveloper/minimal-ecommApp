@@ -35,12 +35,23 @@
   
         <div class="flex items-center gap-4">
           <div class="sm:flex sm:gap-4">
-            <a
-              class="block rounded-md bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700"
-              href="#"
-            >
-              Get Started
+            @if(auth()->check())
+            <a href="/cart" class="text-gray-500 transition hover:text-gray-500/75">
+                <i class="fa-solid fa-cart-shopping"></i>
             </a>
+            
+            <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+    <!-- Content to display if the user is authenticated -->
+@else
+    <a
+        class="block rounded-md bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700"
+        href="/register"
+    >
+        Get Started
+    </a>
+@endif
+
+            
           </div>
   
           <button

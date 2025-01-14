@@ -13,7 +13,7 @@
         </div>
         <div class="mt-4 bg-blue-500 flex justify-center items-center p-2 rounded-lg">
             <i class="fa-solid fa-cart-shopping text-white"></i>
-            <button class=" text-white px-4 py-1 rounded-lg "></i>Add to Cart</button>
+            <button href="{{auth()->check() ? '/cart' : '/login'}}" class=" text-white px-4 py-1 rounded-lg "></i>Add to Cart</button>
         </div>
         </div>
 </div>
